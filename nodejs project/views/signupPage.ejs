@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flavor Fusion-Login Page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="topnavbar">
+            <a href="/" class="splitfalvorfusion">Flavor Fusion</a>
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+            <a href="/signup">SignUp</a>
+            <a href="/login">Login</a>
+            <a href="/">Home</a>
+        </div>
+        <h1 style="margin-top: 4%;text-align: center;">SignUp</h1>
+        <form class="bigContainer" method="post" action="/signup_submit">
+            <div>
+                <label>Email:</label><br>
+                <input type="email" placeholder="Enter your Email Id" name="emailid" required style="border-radius: 6px;">
+            </div>
+            <div>
+                <label>Username:</label><br>
+                <input type="text" placeholder="Enter your Username" name="username" required style="border-radius: 6px;">
+            </div>
+            <div>
+                <label>Password:</label><br>
+                <input type="password" placeholder="Enter your Password" name="password" required style="border-radius: 6px;">
+            </div>
+            <div class="smallContainer">
+                <button type="submit"style="border-radius: 6px;background-color: #5556ef;color: white;">Proceed to SignUP</button>
+                <p>already have an account <a href="/login">Login</a></p>
+            </div>
+        </form>
+    </body>
+</html>

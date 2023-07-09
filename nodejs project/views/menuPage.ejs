@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flavor Fusion</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="topnavbar">
+            <a href="" class="splitfalvorfusion">Flavor Fusion</a>
+            <a href="/userprofile">Profile</a>
+            <a href="/logout">Logout</a>
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+            <a href="">Home</a>
+        </div>
+        <div class="menuheading">
+            
+            <div clas="searchcontainer">
+                <input type="text" placeholder="search" name="search" id="search-input" style="border-radius: 6px;">
+                <button type="submit"><i class="fa fa-search" id="search-button" style="height: 25px;"></i></button>
+            </div>
+        </div>
+        <div class="rightSplit">
+            <h2 style="text-align: center;">Cart</h2>
+            <table style="margin-left: 8%;">
+                <tr>
+                    <th>Items</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                </tr>
+                <% if (cartitems.length) { %>
+                    <% for (let cartitem of cartitems) { %>
+                        <tr>
+                            <td><%= cartitem.title %></td>
+                            <td><%= cartitem.quantity %></td>
+                            <td><%= cartitem.price %></td>
+                        </tr>
+                    <% } %>
+                    <tr>
+                        <td colspan="3" style="text-align: center;">
+                            <button style="height: 50px; width: 100px;">
+                                <a href="/order_summary" style="text-decoration: none;">Buy Now</a>
+                            </button>
+                        </td>
+                    </tr>
+                <% } else { %>
+                    <tr>
+                        <td colspan="3" style="text-align: center;">No items added</td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+        
+        <div class="leftSplit" id="data-output">
+            
+        </div>
+        
+    </body>
+</html>

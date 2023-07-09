@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flavor Fusion-Order Summary</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="summarybody">
+        <h3 style="text-align: center;">order summary</h3>
+        <div class="summarytable">
+            <table>
+                <tr>
+                    <th>Items</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                </tr>
+                <% let sum = 0; %>
+                <% if (cartitems.length) { %>
+                    <% for (let cartitem of cartitems) { %>
+                        <tr>
+                            <td><%= cartitem.title %></td>
+                            <td><%= cartitem.quantity %></td>
+                            <td><%= cartitem.price %></td>
+                        </tr>
+                        <% sum += parseFloat(cartitem.price); %>
+                    <% } %>
+                <% } %>
+                <tr>
+                    <td colspan="3">Total:68 </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <button style="float: right;margin-right: 10%;min-height: 50px;"><a href="/orderhistory" style="text-decoration: none;">Proceed for Payment</a></button>
+            <button style="float: left;margin-left: 10%;min-height: 50px;"><a href="/menu" style="text-decoration: none;">Go back to Menu</a></button>
+        </div>
+    </body>
+</html>
